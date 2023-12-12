@@ -2,318 +2,339 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eta project</title>
-    <link rel="stylesheet" href="style3.css" />
+    <title>newETA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <!-- header disine -->
-    <header>
-      <section class="had1">
-        <button>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
-        </button>
-        <h2>Expense Tracker</h2>
-        <button>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-            />
-          </svg>
-        </button>
-      </section>
-    </header>
-    <!-- mane ka disine -->
-
-    <main>
-      <div class="man">
-        <div class="ma">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-            />
-          </svg>
-        </div>
-        <div class="mb">
-          <h1>Snaiks and tea</h1>
-          <p>01/08/2023</p>
-        </div>
-
-        <div class="md"><h1>50/-</h1></div>
+    <section>
+      <div class="imgc">
+        <img src="ico.png" alt="" />
       </div>
-      <div class="man">
-        <div class="na">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="{1.5}"
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M19.5 4.5l-15 15m0 0h11.25m-11.25 0V8.25"
-            />
-          </svg>
+      <div class="login page" id="login">
+        <div class="top">
+          <h1>One-Time Login</h1>
+          <p class="msg">Please Login To Continue</p>
         </div>
-        <div class="mb">
-          <h1>Tea & Etc..</h1>
-          <p>02/08/2023</p>
-        </div>
-
-        <div class="nd"><h1>150/-</h1></div>
+        <form action="">
+          <div class="mobile_input">
+            <input type="text" name="mobile" placeholder="" id="updown" />
+            <label for="updown">Mobile </label>
+          </div>
+          <div class="mobile_input">
+            <input type="password" placeholder="" name="password" id="updown" />
+            <label for="updown">Password </label>
+          </div>
+          <button>
+            Login..
+            <span>
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
+                ></path>
+              </svg>
+            </span>
+          </button>
+        </form>
       </div>
-      <div class="man">
-        <div class="na">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="{1.5}"
-            stroke="currentColor"
-            className="w-6 h-6"
+      <div class="dashboard page" id="dashboard">
+        <div class="top">
+          <span>
+            SENT :
+            <p class="sent">300</p></span
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M19.5 4.5l-15 15m0 0h11.25m-11.25 0V8.25"
-            />
-          </svg>
-        </div>
-        <div class="mb">
-          <h1>Sabji</h1>
-          <p>02/08/2023</p>
-        </div>
-
-        <div class="nd"><h1>90/-</h1></div>
-      </div>
-      <div class="man">
-        <div class="ma">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
+          <span>
+            RECEIVED :
+            <p class="received">500</p></span
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-            />
-          </svg>
         </div>
-        <div class="mb">
-          <h1>Sabji</h1>
-          <p>02/08/2023</p>
+        <div class="nv">
+          <button class="newdatabtn">
+            NEW DATA
+            <span>
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                ></path>
+              </svg>
+            </span>
+          </button>
+          <button class="viewdatabtn">
+            VIEW DATA
+            <span>
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                ></path>
+              </svg>
+            </span>
+          </button>
         </div>
-
-        <div class="md"><h1>50/-</h1></div>
       </div>
-      <div class="man">
-        <div class="na">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="{1.5}"
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M19.5 4.5l-15 15m0 0h11.25m-11.25 0V8.25"
-            />
-          </svg>
+      <div class="newdataentry page" id="newdataentry">
+        <div class="top">
+          <h1>NEW DATa ENTRY</h1>
+          <p class="msg1">Please Data Fill To Continue</p>
         </div>
-        <div class="mb">
-          <h1>Sabji</h1>
-          <p>02/08/2023</p>
+        <form action="">
+          <div class="mobile_input">
+            <input type="text" name="amount" placeholder="" id="updown" />
+            <label for="updown">Amount </label>
+          </div>
+          <div class="mobile_input">
+            <input type="text" placeholder="" name="description" id="updown" />
+            <label for="updown">Description </label>
+          </div>
+          <div class="mobile_input">
+            <input type="text" placeholder="" name="type" id="updown" />
+            <label for="updown">Type </label>
+          </div>
+          <button>
+            SAVE
+            <span>
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </span>
+          </button>
+        </form>
+        <div class="footer">
+          <span class="left"
+            ><svg
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </span>
+          VIEW DATA : PAGE 1 OF 10
         </div>
-
-        <div class="nd"><h1>520/-</h1></div>
       </div>
-      <div class="man">
-        <div class="ma">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-            />
-          </svg>
+      <div class="editdata page" id="editdata">
+        <div class="top">
+          <h1>Edit DATA</h1>
+          <p class="msg1">Please Data Fill To Continue</p>
         </div>
-        <div class="mb">
-          <h1>Sabji</h1>
-          <p>02/08/2023</p>
+        <form action="">
+          <div class="mobile_input">
+            <input type="text" name="id" placeholder="" id="updown" />
+            <label for="updown">Id </label>
+          </div>
+          <div class="mobile_input">
+            <input type="text" name="amount" placeholder="" id="updown" />
+            <label for="updown">Amount </label>
+          </div>
+          <div class="mobile_input">
+            <input type="text" placeholder="" name="description" id="updown" />
+            <label for="updown">Description </label>
+          </div>
+          <div class="mobile_input">
+            <input type="text" placeholder="" name="type" id="updown" />
+            <label for="updown">Type </label>
+          </div>
+          <div class="mobile_input">
+            <input type="date" name="date" placeholder="" id="updown" />
+            <label for="updown">Date </label>
+          </div>
+          <button>
+            SAVE
+            <span>
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </span>
+          </button>
+        </form>
+        <div class="footer">
+          <span class="left"
+            ><svg
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </span>
+          VIEW DATA : PAGE 1 OF 10
+          <span class="right">
+            <p class="back">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5"
+                ></path>
+              </svg>
+            </p>
+            <p class="next">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                ></path>
+              </svg>
+            </p>
+          </span>
         </div>
-
-        <div class="md"><h1>50/-</h1></div>
       </div>
-      <div class="man">
-        <div class="ma">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-            />
-          </svg>
+      <div class="tabledata page" id="table">
+        <div class="a1">
+          <div class="a2">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Amount</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Date</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
         </div>
-        <div class="mb">
-          <h1>Sabji</h1>
-          <p>02/08/2023</p>
+        <div class="footer">
+          <span class="left"
+            ><svg
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </span>
+          VIEW DATA : PAGE 1 OF 10
+          <span class="right">
+            <p class="backbt">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5"
+                ></path>
+              </svg>
+            </p>
+            <p class="next">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                ></path>
+              </svg>
+            </p>
+          </span>
         </div>
-
-        <div class="md"><h1>200/-</h1></div>
       </div>
-      <div class="man">
-        <div class="ma">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-            />
-          </svg>
-        </div>
-        <div class="mb">
-          <h1>Tea</h1>
-          <p>02/08/2023</p>
-        </div>
-
-        <div class="md"><h1>40/-</h1></div>
-      </div>
-      <div class="man">
-        <div class="ma">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-            />
-          </svg>
-        </div>
-        <div class="mb">
-          <h1>Tea</h1>
-          <p>02/08/2023</p>
-        </div>
-
-        <div class="md"><h1>30/-</h1></div>
-      </div>
-      <div class="man">
-        <div class="na">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-            />
-          </svg>
-        </div>
-        <div class="mb">
-          <h1>Sabji</h1>
-          <p>02/08/2023</p>
-        </div>
-
-        <div class="nd"><h1>70/-</h1></div>
-      </div>
-      <!-- futer start -->
-      <section class="fut1">
-        <div class="dw1">
-          <button class="paisa">+1</button>
-          <button class="paisa">+2</button>
-          <button class="paisa">+5</button>
-          <button class="paisa">+10</button>
-          <button class="paisa">+20</button>
-          <button class="paisa">+50</button>
-          <button class="paisa">+100</button>
-          <button class="paisa">+500</button>
-        </div>
-        <div class="dw2">
-          <input type="text" name="" id="" />
-          <button class="axin">Tea</button>
-          <button class="axin">Snaiks</button>
-          <button class="axin">Sabji</button>
-          <button class="axin">Etc..</button>
-        </div>
-        <div class="dw3">
-          <button class="axin2">SENT</button>
-          <button class="axin3">RECEVED</button>
-        </div>
-      </section>
-      <!-- futer end -->
-    </main>
+    </section>
+    <script src="script.js"></script>
   </body>
 </html>

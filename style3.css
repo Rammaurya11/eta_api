@@ -1,192 +1,584 @@
 * {
   box-sizing: border-box;
 }
-body {
-  margin: 0;
-  background-color: white;
-}
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 90;
-}
-.had1 {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(188, 192, 195);
-  height: 80px;
-  border-radius: 0 0 20px 20px;
-}
-.had1 button {
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
-  width: 50px;
-  background-color: rgb(188, 192, 195);
-  border: 0;
+
+.page {
+  display: none;
 }
 
-main {
+body {
+  line-height: 1.4;
+  font-family: sans-serif;
+  margin: 0;
+}
+body section {
+  background-image: url(/2.webp);
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+body section .imgc {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+body section .imgc img {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: 100px;
+}
+body section .login {
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(226, 236, 253);
+  padding: 24px;
+  border-radius: 25px 25px 0 0;
+}
+body section .login .top {
   display: flex;
   flex-direction: column;
-  background-color: white;
-  padding: 50px;
-  gap: 10px;
 }
-.man {
+body section .login .top h1 {
+  font-family: poppins;
+  margin: 0;
+  color: rgb(55, 120, 208);
+}
+body section .login .top p {
+  margin: 0;
+  font-weight: bold;
+  font-family: poppins;
+}
+body section .login form {
   display: flex;
-  gap: 12px;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 36px;
+  background-color: rgb(226, 236, 253);
+}
+body section .login form .mobile_input {
   position: relative;
-  height: 100px;
-  background-color: rgb(188, 192, 195);
-  border: 1px solid black;
-
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+body section .login form .mobile_input label {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  transition: all 0.3s ease;
+}
+body section .login form .mobile_input input:not(:-moz-placeholder-shown) + label {
+  top: -28px;
+  left: 0;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(56, 118, 207);
+}
+body section .login form .mobile_input input:focus + label,
+body section .login form .mobile_input input:not(:placeholder-shown) + label {
+  top: -28px;
+  left: 0;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(56, 118, 207);
+}
+body section .login form .mobile_input input {
+  height: 42px;
+  outline: 0;
+  border: none;
+  font-size: 18px;
+  border-bottom: 2px solid black;
+  margin-bottom: 12px;
+  background-color: rgb(226, 236, 253);
+}
+body section .login form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  font-family: poppins;
+  margin-top: 24px;
+  height: 46px;
+  font-size: 20px;
+  border: none;
+  background-color: rgb(63, 125, 212);
+  border-radius: 10px;
+  color: whitesmoke;
+}
+body section .login form button span {
+  height: 100%;
+  width: 46px;
+  position: absolute;
+  right: 0;
+  padding: 6px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: rgb(89, 147, 225);
+}
+body section .dashboard {
+  height: 75%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(190, 214, 250);
+  border-radius: 25px 25px 0 0;
+  padding: 24px;
+}
+body section .dashboard .top {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 130px;
+  background-color: rgb(205, 239, 253);
+  flex-direction: column;
+  padding: 26px;
+  font-weight: bold;
+}
+body section .dashboard .top span {
+  font-size: 22px;
+  position: relative;
+  text-align: center;
+  display: flex;
+  font-family: poppins;
+}
+body section .dashboard .top span .sent {
+  position: absolute;
+  margin: 0;
+  right: 24px;
+  color: rgb(251, 9, 114);
+  font-weight: bold;
+}
+body section .dashboard .top span .received {
+  position: absolute;
+  margin: 0;
+  right: 24px;
+  color: rgb(41, 170, 41);
+  font-weight: bold;
+}
+body section .dashboard .nv {
+  display: flex;
+  flex-direction: column;
+  padding-top: 46px;
+}
+body section .dashboard .nv .newdatabtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  font-family: poppins;
+  margin-top: 24px;
+  height: 54px;
+  font-size: 20px;
+  border: none;
+  background-color: rgb(63, 125, 212);
+  border-radius: 10px;
+  color: whitesmoke;
+}
+body section .dashboard .nv .newdatabtn span {
+  height: 100%;
+  width: 54px;
+  position: absolute;
+  left: 0;
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: rgb(89, 147, 225);
+}
+body section .dashboard .nv .viewdatabtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  font-family: poppins;
+  margin-top: 24px;
+  height: 54px;
+  font-size: 20px;
+  border: none;
+  background-color: rgb(106, 124, 147);
+  border-radius: 10px;
+  color: whitesmoke;
+}
+body section .dashboard .nv .viewdatabtn span {
+  height: 100%;
+  width: 54px;
+  position: absolute;
+  left: 0;
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: rgb(133, 147, 165);
+}
+body section .newdataentry {
+  height: 70%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(226, 236, 253);
+  border-radius: 25px 25px 0 0;
+}
+body section .newdataentry .top {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+body section .newdataentry .top h1 {
+  font-family: poppins;
+  margin: 0;
+  color: rgb(55, 120, 208);
+}
+body section .newdataentry .top p {
+  margin: 0;
+  font-weight: bold;
+  font-family: poppins;
+}
+body section .newdataentry form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 24px;
+  background-color: rgb(226, 236, 253);
+}
+body section .newdataentry form .mobile_input {
+  position: relative;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+body section .newdataentry form .mobile_input label {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+body section .newdataentry form .mobile_input input:not(:-moz-placeholder-shown) + label {
+  top: -28px;
+  left: 0;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(56, 118, 207);
+}
+body section .newdataentry form .mobile_input input:focus + label,
+body section .newdataentry form .mobile_input input:not(:placeholder-shown) + label {
+  top: -28px;
+  left: 0;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(56, 118, 207);
+}
+body section .newdataentry form .mobile_input input {
+  height: 42px;
+  outline: 0;
+  border: none;
+  font-size: 18px;
+  border-bottom: 2px solid black;
+  margin-bottom: 12px;
+  background-color: rgb(226, 236, 253);
+}
+body section .newdataentry form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  font-family: poppins;
+  margin-top: 24px;
+  height: 46px;
+  font-size: 20px;
+  border: none;
+  background-color: rgb(63, 125, 212);
+  border-radius: 10px;
+  color: whitesmoke;
+}
+body section .newdataentry form button span {
+  height: 100%;
+  width: 46px;
+  position: absolute;
+  right: 0;
+  padding: 6px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: rgb(89, 147, 225);
+}
+body section .newdataentry .footer {
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(91, 88, 88);
+  border-radius: 30px 30px 0 0;
+  height: 10%;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-weight: bold;
+  font-family: poppins;
+  color: white;
+}
+body section .newdataentry .footer .left {
+  height: 34px;
+  width: 34px;
+  display: flex;
+  background-color: rgb(150, 156, 150);
+  border-radius: 100%;
+  padding: 4px;
+}
+body section .newdataentry .footer .right {
+  display: flex;
+  gap: 8px;
+}
+body section .newdataentry .footer .right p {
+  margin: 0;
+  height: 34px;
+  width: 34px;
+  background-color: rgb(150, 156, 150);
+  border-radius: 100%;
+  padding: 4px;
+}
+body section .editdata {
+  height: 90%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(226, 236, 253);
+  border-radius: 25px 25px 0 0;
+}
+body section .editdata .top {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+body section .editdata .top h1 {
+  font-family: poppins;
+  margin: 0;
+  color: rgb(55, 120, 208);
+}
+body section .editdata .top p {
+  margin: 0;
+  font-weight: bold;
+  font-family: poppins;
+}
+body section .editdata form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 24px;
+  background-color: rgb(226, 236, 253);
+}
+body section .editdata form .mobile_input {
+  position: relative;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+body section .editdata form .mobile_input label {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+body section .editdata form .mobile_input input:not(:-moz-placeholder-shown) + label {
+  top: -28px;
+  left: 0;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(56, 118, 207);
+}
+body section .editdata form .mobile_input input:focus + label,
+body section .editdata form .mobile_input input:not(:placeholder-shown) + label {
+  top: -28px;
+  left: 0;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(56, 118, 207);
+}
+body section .editdata form .mobile_input input {
+  height: 42px;
+  outline: 0;
+  border: none;
+  font-size: 18px;
+  border-bottom: 2px solid black;
+  margin-bottom: 12px;
+  background-color: rgb(226, 236, 253);
+}
+body section .editdata form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  font-family: poppins;
+  margin-top: 24px;
+  height: 46px;
+  font-size: 20px;
+  border: none;
+  background-color: rgb(63, 125, 212);
+  border-radius: 10px;
+  color: whitesmoke;
+}
+body section .editdata form button span {
+  height: 100%;
+  width: 46px;
+  position: absolute;
+  right: 0;
+  padding: 6px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: rgb(89, 147, 225);
+}
+body section .editdata .footer {
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(91, 88, 88);
+  border-radius: 30px 30px 0 0;
+  height: 10%;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-weight: bold;
+  font-family: poppins;
+  color: white;
+}
+body section .editdata .footer .left {
+  height: 34px;
+  width: 34px;
+  display: flex;
+  background-color: rgb(150, 156, 150);
+  border-radius: 100%;
+  padding: 4px;
+}
+body section .editdata .footer .right {
+  display: flex;
+  gap: 8px;
+}
+body section .editdata .footer .right p {
+  margin: 0;
+  height: 34px;
+  width: 34px;
+  background-color: rgb(150, 156, 150);
+  border-radius: 100%;
+  padding: 4px;
+}
+body section .tabledata {
+  height: 90%;
+  width: 100%;
+  background-color: aliceblue;
+  border-radius: 25px 25px 0 0;
+  position: absolute;
+  bottom: 0;
+}
+body section .tabledata .a1 {
+  height: 90%;
+  width: 100%;
+  border-radius: 20px;
+  padding: 16px;
+}
+body section .tabledata .a1 .a2 {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
   border-radius: 20px;
 }
-.ma {
-  left: 100px;
-  height: 80px;
-  width: 80px;
-  color: aliceblue;
-  border-radius: 10px;
-  position: absolute;
-  left: 10px;
-  background-color: red;
-  margin: 10px;
+body section .tabledata .a1 .a2 table {
+  width: 100%;
+  border-collapse: collapse;
+  font-weight: bold;
 }
-.mb {
-  margin: 0px;
-  left: 1px;
-  width: auto;
-  position: absolute;
-  left: 150px;
+body section .tabledata .a1 .a2 table thead tr th {
+  top: 0;
+  position: sticky;
+  height: 48px;
+  background-color: rgb(95, 153, 227);
+  z-index: 1;
+  color: white;
+  padding: 0 16px 0 16px;
+  font-weight: bold;
 }
-.mb h1 {
-  margin: 10px 0 0 0;
+body section .tabledata .a1 .a2 table tbody tr {
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
 }
-.mb p {
+body section .tabledata .a1 .a2 table tbody tr td {
+  height: 58px;
+  text-align: center;
+}
+body section .tabledata .a1 .a2 table tbody tr .delete {
+  color: red;
+  width: 26px;
   margin: 0;
 }
-
-.md {
+body section .tabledata .a1 .a2 table tbody tr .edit {
+  color: rgb(0, 106, 255);
+  width: 26px;
+  margin: 0;
+}
+body section .tabledata .a1 .a2 table tbody tr :last-child {
   display: flex;
+  gap: 8px;
+  justify-content: center;
   align-items: center;
-  height: 80px;
-  width: auto;
-  margin: 10px;
-  position: absolute;
-  padding: 15px;
-  right: 10px;
-  border-radius: 10px;
-  color: red;
-  background-color: white;
 }
-.na {
-  left: 100px;
-  height: 80px;
-  width: 80px;
-  color: aliceblue;
-  border-radius: 10px;
-  position: absolute;
-  left: 10px;
-  background-color: green;
-  margin: 10px;
+body section .tabledata .a1 .a2 table tbody tr :nth-child(1) {
+  position: sticky;
+  left: 0;
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
 }
-
-.nd {
-  display: flex;
-  align-items: center;
-  height: 80px;
-  width: auto;
-  margin: 10px;
+body section .tabledata .footer {
   position: absolute;
-  padding: 15px;
-  right: 10px;
-  border-radius: 10px;
-  color: green;
-  background-color: white;
-}
-.fut1 {
-  position: fixed;
-  bottom: 0px;
+  bottom: 0;
+  background-color: rgb(91, 88, 88);
+  border-radius: 30px 30px 0 0;
+  height: 8%;
   width: 100%;
-  margin-left: -50px;
-  align-items: end;
-  justify-content: end;
-  background-color: aliceblue;
-  height: 200px;
-}
-.dw1 {
+  padding: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: rgb(188, 192, 195);
-  height: 60px;
-}
-.paisa {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  height: 40px;
-  width: 80px;
-  font-size: larger;
+  gap: 16px;
+  font-weight: bold;
+  font-family: poppins;
   color: white;
-  border-radius: 10px;
-  background-color: rgb(8, 194, 8);
 }
-
-.dw2 {
+body section .tabledata .footer .left {
+  height: 34px;
+  width: 34px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(188, 192, 195);
-  height: 60px;
+  background-color: rgb(150, 156, 150);
+  border-radius: 100%;
+  padding: 4px;
 }
-.dw2 input {
-  height: 40px;
-  width: 200px;
-  border-radius: 10px;
-}
-.axin {
+body section .tabledata .footer .right {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  width: 150px;
-  font-size: larger;
-  color: white;
-  border-radius: 10px;
-  background-color: rgb(14, 8, 194);
+  gap: 8px;
 }
-.dw3 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(188, 192, 195);
-  height: 80px;
-}
-.axin2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
-  width: 200px;
-  border-radius: 10px;
-  font-size: larger;
-  color: white;
-  background-color: red;
-}
-.axin3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
-  width: 200px;
-  border-radius: 10px;
-  font-size: larger;
-  color: white;
-  background-color: rgb(8, 194, 8);
-}
+body section .tabledata .footer .right p {
+  margin: 0;
+  height: 34px;
+  width: 34px;
+  background-color: rgb(150, 156, 150);
+  border-radius: 100%;
+  padding: 4px;
+}/*# sourceMappingURL=style.css.map */
