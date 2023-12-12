@@ -69,7 +69,7 @@ body section .login form .mobile_input {
 }
 body section .login form .mobile_input label {
   position: absolute;
-  top: 12px;
+  top: 13px;
   left: 14px;
   transition: all 0.3s ease;
 }
